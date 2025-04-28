@@ -3,12 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/font-awesome/css/font-awesome.min.css';
+import {BrowserRouter , Routes,Route,Link,NavLink} from 'react-router-dom';
+import 'react-loading-skeleton/dist/skeleton.css';
+import { Provider } from 'react-redux';
+import store from './redux/store';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <BrowserRouter>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>
+    </Provider>
+  </BrowserRouter>,
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
