@@ -1,12 +1,22 @@
 import React,{useState,useEffect} from 'react'
 import Card from 'react-bootstrap/card'
 import { Button } from 'react-bootstrap';
+import brand_1 from './images/brand 1.jpg'
+import brand_2 from './images/brand2.jpg'
+import brand_3 from './images/brand3.jpg'
+import brand_4 from './images/brand4.jpg'
+import brand_5 from './images/brand5.jpg'
+import brand_6 from './images/brand6.jpg'
+import brand_7 from './images/brand 7.jpg'
+import brand_8 from './images/brand8.jpg'
+
 import Skeleton from 'react-loading-skeleton';
 const Products = () => {
 const [data,setdata]=useState([]);
 const [filter,setfilter]=useState(data);
 const [loading,setloading]=useState(false);
 let componentMounted=true;
+
 useEffect(()=>{
     const getProducts=async()=>{
         setloading(true);
@@ -29,21 +39,52 @@ const Loading = ()=>{
     return(
     <>
 
+
 <div className='col-md-3'>
-        <Skeleton height={350}/>
+    <Skeleton width={350} height />
+    <img src={brand_1} height="350px" width="350px" /> 
+    
         </div>
     
     <div className='col-md-3'>
-        <Skeleton height={350}/>
+    <Skeleton width={350} height />
+
+        <img src={brand_2} alt="" height="350px" width="350px" />
+       
         </div>
     
     <div className='col-md-3'>
-        <Skeleton height={350}/>
+    <Skeleton width={350} height />
+
+        <img src={brand_3} alt="rania" height="350px" width="350px" />
         </div>
     <div className='col-md-3'>
-        <Skeleton height={350}/>
+    <Skeleton width={350} height />
+
+        <img src={brand_4} alt="" height="350px" width="350px" />
         </div>
-</>);
+    <div className='col-md-3'>
+    <Skeleton width={350} height />
+
+        <img src={brand_5} alt="" height="350px" width="350px" />
+        </div>
+    <div className='col-md-3'>
+    <Skeleton width={350} height />
+
+        <img src={brand_6} alt="" height="350px" width="350px" />
+        </div>
+    <div className='col-md-3'>
+    <Skeleton width={350} height />
+        <img src={brand_7} alt="" height="350px" width="350px" />
+        </div>
+    <div className='col-md-3'>
+    <Skeleton width={350} height />
+        <img src={brand_8} alt="" height="350px" width="350px" />
+        </div>
+
+     
+</>
+)
 
 };
 
@@ -57,7 +98,7 @@ return(
     <>
 <div className='buttons d-flex justify-content-center mb-5 pb-5'> 
 <button className='btn btn-outline-dark ' onClick={()=>
-    setfilter(data)}> All</button>
+setloading(true)}> All</button>
 <button className='btn btn-outline-dark me-2' onClick={() => 
     filterproducts("woman clothing")}> Woman clothes</button>
 <button className='btn btn-outline-dark me-2' onClick={() => 

@@ -23,7 +23,7 @@ const addproduct=(product)=>{
 useEffect(()=>{
     const getProduct=async()=>{
         setloading(true);
-        const response=await fetch(`https://fakestoreapi.com/products/${id}`);
+        const response=await fetch('https://jsonplaceholder.typicode.com/todos/1');
         setproduct(await response.json());
         setloading(false);
     }

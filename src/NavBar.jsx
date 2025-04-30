@@ -5,7 +5,10 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Login from './Login';
 import { NavLink } from 'react-router-dom';
+import Register from './Register';
+
 const Navbarr = () => {
   return (
     <div>
@@ -31,24 +34,24 @@ const Navbarr = () => {
             <Nav.Link to="/about">About</Nav.Link>
             <Nav.Link to="/contact">Contact</Nav.Link>
             
-            
+           
               
         
 
           </Nav>
 <div className='buttons'>
-<NavLink to="/login" className='btn btn-outline-dark '>
-    <i className='fa fa-login me-1'></i>Login</NavLink>
+<NavLink to='./login.jsx' className='btn btn-outline-dark ' target='on_blank'>
+    <i className='fa fa-login me-1'  ></i>Login</NavLink>
 </div>
 <div className='buttons'>
-<NavLink to="/Register" className='btn btn-outline-dark ms-2 '>
+<NavLink to='./Register' className='btn btn-outline-dark ms-2 ' target='on_blank'>
     <i className='fa fa-login me-1'></i>Register
     </NavLink>
 </div>
 <div className='buttons'>
-<NavLink to="/Cart" className='btn btn-outline-dark ms-2'>
+<NavLink to='../src/redux/store.js' className='btn btn-outline-dark ms-2' target='on_blank'>
     <i className='fa fa-login me-1'></i>Cart (0)</NavLink>
-</div>
+</div>  
 
         </Navbar.Collapse>
 

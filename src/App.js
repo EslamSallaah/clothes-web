@@ -4,23 +4,44 @@ import NavBar from './NavBar';
 import Products from './Products';
 import React from 'react';
 import Product from './Product';
-import {Switch , Route , Router} from 'react-router-dom';
-
+import {BrowserRouter , Route , Router, Routes} from 'react-router-dom';
+import Login from './Login';
+import Register from './Register';
+import Store from './redux/Store';
+import Handlecart from './redux/action/reducer/Handlecart';
 function App() {
   return (
+    
+
+
 <>
+
 <NavBar />
 <Home />
-{/* <Switch>
-  <Route exact path="/" component={Home} />
-  <Route exact path="/products" component={Products} />
-  <Route exact path="/product/:id" component={Product} />
-  <Route exact path="/about" component={() => <h1>About</h1>} />
 
-  <Route component={() => <h1>404 Not Found</h1>} />
+  <Routes>
+<Route path="/" element={<Home />} />
+<Route path="/products" element={<Products />} />
+<Route path="/products/:id" element={<Product />} />
+<Route path="/about" element={<h1>About</h1>} />
+<Route path="/contact" element={<h1>Contact</h1>} />
+<Route path='./Login.jsx' element={<h1>Login</h1>} />
+<Route path='./Register.jsx' element={<h1>Register</h1>} />
+<Route path='./redux/action/reducer/Handlecart.js' element={<h1>Cart</h1>} />
+<Route path="/products/:id" element={<Product />} />
+</Routes>
 
-</Switch> */}
-    </>
+
+
+
+
+
+
+
+
+
+
+</>
   );
 }
 
